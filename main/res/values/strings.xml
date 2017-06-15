@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">CheeseQuiz</string>
+    <string name="text_introduction">Answer some questions about the cheese world</string>
+
+    <string name="text_question1">Q1 - How many different cheese exists in France ?</string>
+    <string name="text_question2">Q2 - In which country is cheese most eaten ?</string>
+    <string name="text_question3">Q3 - What is the origin of the Emmentaler cheese ?</string>
+    <string name="text_question4">Q4 - How much Kcal corresponds to 100 grams of Reblochon?</string>
+    <string name="text_question5">Q5 - Which country is the largest producer of cheese in the world?</string>
+
+    <string name="Q1_response1">360</string>
+    <string name="Q1_response2">808</string>
+    <string name="Q1_response3">1200</string>
+
+    <string name="Q2_response1">Italy</string>
+    <string name="Q2_response2">France</string>
+    <string name="Q2_response3">Belgium</string>
+
+    <string name="Q3_response1">France</string>
+    <string name="Q3_response2">Germany</string>
+    <string name="Q3_response3">Switzerland</string>
+
+    <string name="Q4_response1">France</string>
+    <string name="Q4_response2">Germany</string>
+    <string name="Q4_response3">Switzerland</string>
+
+    <string name="btn_ckeck_q1">Check question1</string>
+    <string name="btn_ckeck_q2">Check question2</string>
+    <string name="btn_ckeck_q3">Check question3</string>
+    <string name="btn_final_result">Result</string>
+
+
+</resources>
