@@ -3,5 +3,15 @@
     <dimen name="text_introduction_margin_left">20dp</dimen>
     <dimen name="text_introduction_margin_bottom">20dp</dimen>
     <dimen name="question_margin">10dp</dimen>
+    <dimen name="question4_margin_botom">4dp</dimen>
     <dimen name="btn_margin_top">15dp</dimen>
+
+    <dimen name="linearLayout_padding">20dp</dimen>
+    <dimen name="linearLayout_margin_top">20dp</dimen>
+
+    <dimen name="text_question_size">16sp</dimen>
+    <dimen name="text_title_size">20sp</dimen>
+
+    <dimen name="btn_marginBottom">16dp</dimen>
+    <dimen name="input_text_width">100dp</dimen>
 </resources>

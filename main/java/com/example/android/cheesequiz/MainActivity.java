@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
                 //******************************************************
 
                 //***** Check result and display them *********************
-               int totalSentinelles = sentinel_q4 +sentinel_q3 + sentinel_q2 + sentinel_q1;
+                int totalSentinelles = sentinel_q4 + sentinel_q3 + sentinel_q2 + sentinel_q1;
                 /*
                 // send an intent to ResultOfQuizz class which will give results
                 Intent resultIntent = new Intent(MainActivity.this, ResultOfQuizz.class);
@@ -161,21 +161,21 @@ public class MainActivity extends AppCompatActivity {
 
 
                 // launch ResultOfQuizz activity once button_final_result has been clicked
-            if (!noAnswers) {
+                if (!noAnswers) {
 
                 // startActivity(resultIntent);
-                Toast.makeText(MainActivity.this, "responses matches solutions." + rightAnswers + " by " + 3 + "\n" +
-                                "Your preferred cheese is: " + yourCheese,
+                    Toast.makeText(MainActivity.this, "responses matches solutions." + rightAnswers + " by " + 3 + "\n" +
+                                    "Your preferred cheese is: " + yourCheese,
                         Toast.LENGTH_LONG).show();
 
                 // Reset follow-up tokens
                 rightAnswers = 0;
-                noAnswers = false;
+                    noAnswers = false;
                 sentinel_q1 = 0;
                 sentinel_q2 = 0;
                 sentinel_q3 = 0;
                 sentinel_q4 = 0;
-            }
+                }
 
             }
         });

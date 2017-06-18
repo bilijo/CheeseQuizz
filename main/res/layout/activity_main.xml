@@ -6,8 +6,10 @@
     tools:context="com.example.android.cheesequiz.MainActivity">
 
     <LinearLayout
+        android:background="@color/backgd_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="@dimen/linearLayout_padding"
         android:orientation="vertical">
 
         <TextView
@@ -18,6 +20,8 @@
             android:layout_gravity="center"
             android:layout_marginBottom="@dimen/text_introduction_margin_bottom"
             android:textSize="@dimen/text_title_size"
+            android:textColor="@color/title_color_font"
+
             android:text="@string/text_introduction"
              />
 
@@ -26,8 +30,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="7dp"
             android:id="@+id/linearLayout1">
 
             <TextView
@@ -37,7 +39,8 @@
                 android:layout_weight="1"
                 android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/question_margin"
-                android:textSize="16sp"
+                android:textSize="@dimen/text_question_size"
+                android:textColor="@color/question1_color_font"
                 android:text="@string/text_question1" />
 
             <RadioGroup
@@ -75,8 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            tools:layout_editor_absoluteX="8dp"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="@dimen/linearLayout_margin_top">
 
             <TextView
                 android:id="@+id/question2"
@@ -84,9 +86,9 @@
                 android:layout_height="0dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/text_question2"
-                android:textSize="16sp" />
+                android:textSize="@dimen/text_question_size"
+                android:textColor="@color/question2_color_font"
+                android:text="@string/text_question2"/>
 
             <RadioGroup
                 android:id="@+id/radioGroupQuestion2"
@@ -123,8 +125,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            tools:layout_editor_absoluteX="8dp"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="@dimen/linearLayout_margin_top">
 
             <TextView
                 android:id="@+id/question3"
@@ -132,9 +133,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:text="@string/text_question3"
-                android:textSize="16sp" />
+                android:textSize="@dimen/text_question_size"
+                android:textColor="@color/question3_color_font"/>
 
                 <CheckBox
                     android:id="@+id/checkbox3_1"
@@ -171,23 +172,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            tools:layout_editor_absoluteX="8dp"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="@dimen/linearLayout_margin_top">
 
             <TextView
                 android:id="@+id/question4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="@dimen/question4_margin_botom"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/text_question4"
-                android:textSize="16sp" />
+                android:textSize="@dimen/text_question_size"
+                android:textColor="@color/question4_color_font"/>
 
             <EditText
                 android:inputType="text"
                 android:id="@+id/editText4_1"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/input_text_width"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.75"
                 android:text="" />
@@ -200,6 +201,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/btn_margin_top"
+            android:layout_marginBottom="@dimen/btn_marginBottom"
             android:text="@string/btn_final_result" />
 
     </LinearLayout>

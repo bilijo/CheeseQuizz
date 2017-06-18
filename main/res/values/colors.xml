@@ -3,4 +3,13 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="backgd_main">#4d79ff</color>
+
+    <color name="title_color_font">#e6b800</color>
+
+    <color name="question1_color_font">#ffff1a</color>
+    <color name="question2_color_font">#b30086</color>
+    <color name="question3_color_font">#00e6e6</color>
+    <color name="question4_color_font">#99ff66</color>
 </resources>
