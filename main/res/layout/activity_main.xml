@@ -16,8 +16,10 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/text_introduction_margin_bottom"
+            android:textSize="@dimen/text_title_size"
             android:text="@string/text_introduction"
-            android:layout_marginBottom="@dimen/text_introduction_margin_bottom" />
+             />
 
         <!-- Question number 1   -->
         <LinearLayout
@@ -31,10 +33,10 @@
             <TextView
                 android:id="@+id/question1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/question_margin"
                 android:textSize="16sp"
                 android:text="@string/text_question1" />
 
@@ -66,12 +68,6 @@
                     android:text="@string/Q1_response3" />
             </RadioGroup>
 
-            <Button
-                android:id="@+id/button_check_Q1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/btn_ckeck_q1" />
         </LinearLayout>
 
         <!-- Question number 2  -->
@@ -85,7 +81,7 @@
             <TextView
                 android:id="@+id/question2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:gravity="center"
@@ -116,15 +112,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.75"
-                    android:text="@string/Q3_response3" />
+                    android:text="@string/Q2_response3" />
             </RadioGroup>
 
-            <Button
-                android:id="@+id/button_check_Q2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/btn_ckeck_q2" />
 
         </LinearLayout>
 
@@ -146,39 +136,62 @@
                 android:text="@string/text_question3"
                 android:textSize="16sp" />
 
-            <RadioGroup
-                android:id="@+id/radioGroupQuestion3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <RadioButton
-                    android:id="@+id/radioButton3_1"
+                <CheckBox
+                    android:id="@+id/checkbox3_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.75"
                     android:text="@string/Q3_response1" />
 
-                <RadioButton
-                    android:id="@+id/radioButton3_2"
+                <CheckBox
+                    android:id="@+id/checkbox3_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.75"
                     android:text="@string/Q3_response2" />
 
-                <RadioButton
-                    android:id="@+id/radioButton3_3"
+                <CheckBox
+                    android:id="@+id/checkbox3_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.75"
                     android:text="@string/Q3_response3" />
-            </RadioGroup>
 
-            <Button
-                android:id="@+id/button_check_Q3"
-                android:layout_width="match_parent"
+                <CheckBox
+                    android:id="@+id/checkbox3_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:text="@string/Q3_response4" />
+
+        </LinearLayout>
+
+        <!-- Question number 4  -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/question4"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                android:text="@string/btn_ckeck_q3" />
+                android:gravity="center"
+                android:text="@string/text_question4"
+                android:textSize="16sp" />
+
+            <EditText
+                android:inputType="text"
+                android:id="@+id/editText4_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="" />
+
 
         </LinearLayout>
 
@@ -186,6 +199,7 @@
             android:id="@+id/button_final_result"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/btn_margin_top"
             android:text="@string/btn_final_result" />
 
     </LinearLayout>
