@@ -1,5 +1,6 @@
 package com.example.android.cheesequiz;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     // tokens to store right or wrong responses
     private int rightAnswers = 0;
-    // private int wrongAnswers = 0;
+    private boolean noAnswers = false;
 
     // tokens to watch if responses were given
     private int sentinel_q1 = 0;
@@ -62,11 +63,12 @@ public class MainActivity extends AppCompatActivity {
 
                     //Check if item selected is correct then increase token by 1
                     if (selectedRadioButtonText1.equals("1200")) {
-
                         rightAnswers++;
+                        noAnswers = false;
                     }
 
                 } else {
+                    noAnswers = true;
                     // If nothing is selected from Radio Group, then it return Toast message
                     Toast.makeText(MainActivity.this, "Nothing selected from Radio Group 1.",
                             Toast.LENGTH_LONG).show();
@@ -91,9 +93,11 @@ public class MainActivity extends AppCompatActivity {
                     //Check if item selected is correct then increase token by 1
                     if (selectedRadioButtonText2.equals("France")) {
                         rightAnswers++;
+                        noAnswers = false;
                     }
 
                 } else {
+                    noAnswers = true;
                     //Toast.setGravity(Gravity.TOP|Gravity.START, 0, 0);
                     Toast.makeText(MainActivity.this, "Nothing selected from Radio Group 2.",
                             Toast.LENGTH_LONG).show();
@@ -113,12 +117,13 @@ public class MainActivity extends AppCompatActivity {
 
                 // Check right answer
                 if ((checkBox1.isChecked() && checkBox3.isChecked() && checkBox4.isChecked()) && (!checkBox2.isChecked())) {
-
+                    sentinel_q3++;
                     rightAnswers++;
+                    noAnswers = false;
                 }
 
                 if (sentinel_q3 == 0) {
-
+                    noAnswers = true;
                     //message if no checkboxes selected
                     Toast.makeText(MainActivity.this, "Nothing selected from checkboxes.",
                             Toast.LENGTH_LONG).show();
@@ -132,18 +137,22 @@ public class MainActivity extends AppCompatActivity {
                 String yourCheese = mEditText.getText().toString();
 
                 if (!mEditText.getText().toString().equals("")) {
-
                     sentinel_q4++;
+                    noAnswers = false;
 
-                } else                     //message if no checkboxes selected
+                } else {
+                    noAnswers = true;
+                    //message if no checkboxes selected
                     Toast.makeText(MainActivity.this, "Nothing entered in input text field.",
                             Toast.LENGTH_LONG).show();
+                }
+
 
                 //******************************************************
 
                 //***** Check result and display them *********************
-              /*  int totalSentinelles = sentinel_q4 +sentinel_q3 + sentinel_q2 + sentinel_q1;
-
+               int totalSentinelles = sentinel_q4 +sentinel_q3 + sentinel_q2 + sentinel_q1;
+                /*
                 // send an intent to ResultOfQuizz class which will give results
                 Intent resultIntent = new Intent(MainActivity.this, ResultOfQuizz.class);
                 resultIntent.putExtra("Sentinelles", totalSentinelles);
@@ -152,19 +161,21 @@ public class MainActivity extends AppCompatActivity {
 
 
                 // launch ResultOfQuizz activity once button_final_result has been clicked
-
+            if (!noAnswers) {
 
                 // startActivity(resultIntent);
-                Toast.makeText(MainActivity.this, "responses matches solutions." + rightAnswers + " by " + 3 +"\n" +
-                        "Your preferred cheese is: " + yourCheese,
+                Toast.makeText(MainActivity.this, "responses matches solutions." + rightAnswers + " by " + 3 + "\n" +
+                                "Your preferred cheese is: " + yourCheese,
                         Toast.LENGTH_LONG).show();
 
                 // Reset follow-up tokens
                 rightAnswers = 0;
+                noAnswers = false;
                 sentinel_q1 = 0;
                 sentinel_q2 = 0;
                 sentinel_q3 = 0;
                 sentinel_q4 = 0;
+            }
 
             }
         });
